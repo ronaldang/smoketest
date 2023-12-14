@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your SME Lending Business</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #343a40;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #495057;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .benefit {
+            flex: 0 1 calc(33.3333% - 20px);
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #e2f3f5;
+        }
+
+        .enquiry-form {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your SME Lending Business</h1>
+    </header>
+
+    <section>
+        <h2>Unlock Your Business Potential with Revenue-Based Financing</h2>
+        <p>We offer innovative revenue-based financing solutions tailored for small and medium enterprises (SMEs). Explore the key benefits of partnering with us.</p>
+
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Flexible Repayment</h3>
+                <p>Aligns with your business's cash flow, ensuring sustainable growth.</p>
+            </div>
+            <div class="benefit">
+                <h3>Rapid Access to Capital</h3>
+                <p>Quick and efficient funding process to meet your immediate needs.</p>
+            </div>
+            <div class="benefit">
+                <h3>No Equity Dilution</h3>
+                <p>Maintain ownership and control of your business throughout the financing period.</p>
+            </div>
+            <div class="benefit">
+                <h3>Customized Solutions</h3>
+                <p>Tailored financing options designed to address your specific business requirements.</p>
+            </div>
+        </div>
+
+
+    <section>
+        <h2>How Revenue-Based Financing Works</h2>
+        <p>Revenue-based financing is a funding model that aligns with your business's cash flow. Here's a simplified explanation:</p>
+
+        <!-- PLACEHOLDER FOR DIAGRAM --->
+<!--         <div class="diagram">
+            <img src="revenue-financing-diagram.png" alt="Revenue-Based Financing Diagram" style="max-width: 100%;">
+        </div>
+ -->
+        <p>In revenue-based financing:</p>
+        <ol>
+            <li>Your business receives a lump sum of capital.</li>
+            <li>Repayments are tied to a percentage of your monthly revenue.</li>
+            <li>As your revenue fluctuates, your repayments adjust accordingly.</li>
+            <li>There are no fixed monthly payments, offering flexibility.</li>
+            <li>The partnership continues until a predetermined total repayment amount is reached.</li>
+        </ol>
+
+        <p>This model allows your business to thrive without the pressure of fixed repayments during slower months, making it a flexible and sustainable financing solution.</p>
+    </section>
+
+
+
+
+        <h2>Get in Touch</h2>
+        <p>Have questions or ready to take the next step? Leave us a message, and we'll get back to you promptly.</p>
+
+        <div class="enquiry-form">
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us at info@smeloan.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('enquiryForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Add logic to handle form submission (e.g., send data to server)
+            alert('Thank you! We will get back to you shortly.');
+        });
+    </script>
+</body>
+</html>
