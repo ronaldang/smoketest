@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your SME Lending Business</title>
+    <title>SME Loans Co.</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: verdana;, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            color: #495057;
+            color: #262626;
         }
 
         header {
-            background-color: #343a40;
+            background-color: #f2f2f2;
             color: #ffffff;
             text-align: center;
             padding: 1em;
@@ -49,7 +49,7 @@
 
         .benefits {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             margin-top: 20px;
         }
@@ -60,7 +60,7 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #e2f3f5;
+            background-color: #f2f2f2;
         }
 
         .enquiry-form {
@@ -107,7 +107,7 @@
 </head>
 <body>
     <header>
-        <h1>Your SME Lending Business</h1>
+        <h1>SME Loans Co.</h1>
     </header>
 
     <section>
@@ -157,33 +157,40 @@
 
 
 
-
+    <section>
         <h2>Get in Touch</h2>
-        <p>Have questions or ready to take the next step? Leave us a message, and we'll get back to you promptly.</p>
+        <p>Have questions or ready to take the next step? Leave us a message, and we'll get back to you promptly.
+        </p>
 
         <div class="enquiry-form">
-            <form id="enquiryForm">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
+                <form id="enquiryForm">
+                    <div class="form-group">
+
+            <form name="contact" method="POST" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
+                <p  hidden>
+                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                </p>
+                <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <div data-netlify-recaptcha="true"></div>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
             </form>
         </div>
     </section>
 
-    <footer>
+<!--     <footer>
         <p>Contact us at info@smeloan.com</p>
     </footer>
-
+ -->
     <script>
         document.getElementById('enquiryForm').addEventListener('submit', function (event) {
             event.preventDefault();
