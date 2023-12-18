@@ -14,6 +14,25 @@
 </script>
 <!-- End Google Tag Manager -->
 
+<!-- Event snippet for Submit lead form conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11451083159/2zOYCMb20oAZEJfTptQq',
+      'value': 1.0,
+      'currency': 'SGD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<!-- End snippet -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,7 +197,7 @@
 
         <div class="enquiry-form">
             <div class="form-group">
-                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" action = '/success/'>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" action = '/success/' onsubmit="gtag_report_conversion()">
                     <p  hidden>
                         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
